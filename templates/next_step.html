@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Next Step</title>
+</head>
+<body>
+    <h1>User ID: {{ user_id }}</h1>
+    <p>Order Total: ${{ order_total }}</p>
+    <form action="{{ url_for('next_step', user_id=user_id, order_total=order_total) }}" method="POST">
+        <!-- Form fields go here -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
